@@ -1,14 +1,14 @@
 <?php 
 namespace App\Http\Controllers;
 
-use App\Model\Models\Checkpoint;
+use App\Models\Checkpoint;
 use Illuminate\Http\Request;
 
 class CheckpointController extends Controller
 {
     public function tambah(Request $request){
         $this->validate($request,[
-            'id_checpoint'=>'required',
+            'id_checkpoint'=>'required',
             'titik_checkpoint'=>'required',
             'detail'=>'required'
             ]);    

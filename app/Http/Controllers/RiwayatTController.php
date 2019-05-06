@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controller;
 
-use App\Model\Models\RiwayatT;
+use App\Models\RiwayatT;
 use Illuminate\Http\Request;
 
 class RiwayatTController extends Controller

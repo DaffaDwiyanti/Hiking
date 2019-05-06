@@ -1,7 +1,7 @@
 <?php 
 namespace App\Http\Controller;
 
-use App\Model\Models\Simaksi;
+use App\Models\Simaksi;
 use Illuminate\Http\Request;
 
 class SimaksiController extends Controller

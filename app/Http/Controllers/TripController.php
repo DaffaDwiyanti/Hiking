@@ -1,7 +1,7 @@
 <?php 
 namespace App\Http\Controller;
 
-use App\Model\Models\Trip;
+use App\Models\Trip;
 use Illuminate\Http\Request;
 
 class TripController extends Controller

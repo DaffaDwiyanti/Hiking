@@ -1,7 +1,7 @@
 <?php 
 namespace App\Http\Controller;
 
-use App\Model\Models\TripDetail;
+use App\Models\TripDetail;
 use Illuminate\Http\Request;
 
 class TripDetailController extends Controller

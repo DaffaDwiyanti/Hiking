@@ -1,7 +1,7 @@
 <?php 
 namespace App\Http\Controller;
 
-use App\Model\Models\Transaksi;
+use App\Models\Transaksi;
 use Illuminate\Http\Request;
 
 class TransaksiController extends Controller
