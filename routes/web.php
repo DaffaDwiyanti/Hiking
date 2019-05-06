@@ -15,58 +15,58 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$app->post('/checkpoint','CheckpointController@tambah');
-$app->put('/checkpoint/{id}','CheckpointController@update');
-$app->get('/checkpoint','CheckpointController@tampil');
-$app->get('/checkpoint/{id}','CheckpointController@tampilSendiri');
-$app->delete('/checkpoint/{id}','CheckpointController@hapus');
+$router->post('/checkpoint','CheckpointController@tambah');
+$router->put('/checkpoint/{id}','CheckpointController@update');
+$router->get('/checkpoint','CheckpointController@tampil');
+$router->get('/checkpoint/{id}','CheckpointController@tampilSendiri');
+$router->delete('/checkpoint/{id}','CheckpointController@hapus');
 
-$app->post('/destinasi','CheckpointController@tambah');
-$app->put('/destinasi/{id}','CheckpointController@update');
-$app->get('/destinasi','CheckpointController@tampil');
-$app->get('/destinasi/{id}','CheckpointController@tampilSendiri');
-$app->delete('/destinasi/{id}','CheckpointController@hapus');
+$router->post('/destinasi','DestinasiController@tambah');
+$router->put('/destinasi/{id}','DestinasiController@update');
+$router->get('/destinasi','DestinasiController@tampil');
+$router->get('/destinasi/{id}','DestinasiController@tampilSendiri');
+$router->delete('/destinasi/{id}','DestinasiController@hapus');
 
-$app->post('/riwayat','CheckpointController@tambah');
-$app->put('/riwayat/{id}','CheckpointController@update');
-$app->get('/riwayat','CheckpointController@tampil');
-$app->get('/riwayat/{id}','CheckpointController@tampilSendiri');
-$app->delete('/riwayat/{id}','CheckpointController@hapus');
+$router->post('/riwayat','RiwayatController@tambah');
+$router->put('/riwayat/{id}','RiwayatController@update');
+$router->get('/riwayat','RiwayatController@tampil');
+$router->get('/riwayat/{id}','RiwayatController@tampilSendiri');
+$router->delete('/riwayat/{id}','RiwayatController@hapus');
 
-$app->post('/room','CheckpointController@tambah');
-$app->put('/room/{id}','CheckpointController@update');
-$app->get('/room','CheckpointController@tampil');
-$app->get('/room/{id}','CheckpointController@tampilSendiri');
-$app->delete('/room/{id}','CheckpointController@hapus');
+$router->post('/room','RoomController@tambah');
+$router->put('/room/{id}','RoomController@update');
+$router->get('/room','RoomController@tampil');
+$router->get('/room/{id}','RoomController@tampilSendiri');
+$router->delete('/room/{id}','RoomController@hapus');
 
-$app->post('/simaksi','CheckpointController@tambah');
-$app->put('/simaksi/{id}','CheckpointController@update');
-$app->get('/simaksi','CheckpointController@tampil');
-$app->get('/simaksi/{id}','CheckpointController@tampilSendiri');
-$app->delete('/simaksi/{id}','CheckpointController@hapus');
+$router->post('/simaksi','SimaksiController@tambah');
+$router->put('/simaksi/{id}','SimaksiController@update');
+$router->get('/simaksi','SimaksiController@tampil');
+$router->get('/simaksi/{id}','SimaksiController@tampilSendiri');
+$router->delete('/simaksi/{id}','SimaksiController@hapus');
 
-$app->post('/transaksi','CheckpointController@tambah');
-$app->put('/transaksi/{id}','CheckpointController@update');
-$app->get('/transaksi','CheckpointController@tampil');
-$app->get('/transaksi/{id}','CheckpointController@tampilSendiri');
-$app->delete('/transaksi/{id}','CheckpointController@hapus');
+$router->post('/transaksi','TransaksiController@tambah');
+$router->put('/transaksi/{id}','TransaksiController@update');
+$router->get('/transaksi','TransaksiController@tampil');
+$router->get('/transaksi/{id}','TransaksiController@tampilSendiri');
+$router->delete('/transaksi/{id}','TransaksiController@hapus');
 
-$app->post('/trip','CheckpointController@tambah');
-$app->put('/trip/{id}','CheckpointController@update');
-$app->get('/trip','CheckpointController@tampil');
-$app->get('/trip/{id}','CheckpointController@tampilSendiri');
-$app->delete('/trip/{id}','CheckpointController@hapus');
+$router->post('/trip','TripController@tambah');
+$router->put('/trip/{id}','TripController@update');
+$router->get('/trip','TripController@tampil');
+$router->get('/trip/{id}','TripController@tampilSendiri');
+$router->delete('/trip/{id}','TripController@hapus');
 
-$app->post('/tripdetail','CheckpointController@tambah');
-$app->put('/tripdetail/{id}','CheckpointController@update');
-$app->get('/tripdetail','CheckpointController@tampil');
-$app->get('/tripdetail/{id}','CheckpointController@tampilSendiri');
-$app->delete('/tripdetail/{id}','CheckpointController@hapus');
+$router->post('/tripdetail','TripDetailController@tambah');
+$router->put('/tripdetail/{id}','TripDetailController@update');
+$router->get('/tripdetail','TripDetailController@tampil');
+$router->get('/tripdetail/{id}','TripDetailController@tampilSendiri');
+$router->delete('/tripdetail/{id}','TripDetailController@hapus');
 
-$app->post('/user','CheckpointController@tambah');
-$app->put('/user/{id}','CheckpointController@update');
-$app->get('/user','CheckpointController@tampil');
-$app->get('/user/{id}','CheckpointController@tampilSendiri');
-$app->delete('/user/{id}','CheckpointController@hapus');
+$router->post('/user','UserController@tambah');
+$router->put('/user/{id}','UserController@update');
+$router->get('/user','UserController@tampil');
+$router->get('/user/{id}','UserController@tampilSendiri');
+$router->delete('/user/{id}','UserController@hapus');
 
 ?>

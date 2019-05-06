@@ -1,8 +1,9 @@
 <?php 
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 
-use App\Model\Models\Destinasi;
+use App\Models\Destinasi;
 use Illuminate\Http\Request;
+// use App\Http\Controllers\Controller; 
 
 class DestinasiController extends Controller
 {
