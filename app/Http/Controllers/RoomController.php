@@ -1,5 +1,5 @@
 <?php 
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 
 use App\Models\Room;
 use Illuminate\Http\Request;
@@ -21,7 +21,7 @@ class RoomController extends Controller
         'penanggung_jawab'=>'required', 
         'room_status'=>'required', 
         'id_simaksi'=>'required']);
-        Room::create($request->all());
+        return Room::create($request->all());
 
     }
 

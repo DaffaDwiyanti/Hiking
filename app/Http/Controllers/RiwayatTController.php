@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 
 use App\Models\RiwayatT;
 use Illuminate\Http\Request;

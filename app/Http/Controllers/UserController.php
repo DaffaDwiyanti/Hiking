@@ -1,7 +1,7 @@
 <?php 
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -24,7 +24,7 @@ class UserController extends Controller
         'alamat'=>'required',
         'nik'=>'required',
         'role'=>'required']);
-        User::create($request->all());
+        return User::create($request->all());
 
     }
 

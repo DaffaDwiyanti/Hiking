@@ -1,5 +1,5 @@
 <?php 
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 
 use App\Models\TripDetail;
 use Illuminate\Http\Request;
@@ -20,7 +20,7 @@ class TripDetailController extends Controller
         $this->validate($request, ['id_room'=>'required', 
         'user_id'=>'required',
         'id_trip'=>'required']);
-        TripDetail::create($request->all());
+        return TripDetail::create($request->all());
 
     }
 

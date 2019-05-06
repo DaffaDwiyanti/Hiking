@@ -1,5 +1,5 @@
 <?php 
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 
 use App\Models\Trip;
 use Illuminate\Http\Request;
@@ -23,7 +23,7 @@ class TripController extends Controller
         'tgl_mulai'=>'required', 
         'tgl_selesai'=>'required',
         'id_checkpoint'=>'required']);
-        Trip::create($request->all());
+        return Trip::create($request->all());
 
     }
 

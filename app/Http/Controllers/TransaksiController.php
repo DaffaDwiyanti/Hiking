@@ -1,5 +1,5 @@
 <?php 
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 
 use App\Models\Transaksi;
 use Illuminate\Http\Request;
@@ -22,7 +22,7 @@ class TransaksiController extends Controller
         'id_trip'=>'required', 
         'total_bayar'=>'required', 
         'id_riwayat_transaksi'=>'required']);
-        Transaksi::create($request->all());
+        return Transaksi::create($request->all());
 
     }
 

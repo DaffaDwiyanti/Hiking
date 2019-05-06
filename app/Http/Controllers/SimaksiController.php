@@ -1,8 +1,9 @@
 <?php 
-namespace App\Http\Controller;
+namespace App\Http\Controllers;
 
 use App\Models\Simaksi;
 use Illuminate\Http\Request;
+
 
 class SimaksiController extends Controller
 {
@@ -17,9 +18,8 @@ class SimaksiController extends Controller
         return $Simaksi;
     }
     public function tambah(Request $request){
-        $this->validate($request, ['id_simaksi'=>'required', 
-        'user_id'=>'required']);
-        Simaksi::create($request->all());
+        $this->validate($request, ['id_simaksi'=>'required', 'user_id'=>'required']);
+        return Simaksi::create($request->all());
 
     }
 
