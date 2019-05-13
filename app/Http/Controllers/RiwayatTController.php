@@ -21,13 +21,12 @@ class RiwayatTController extends Controller
 
     public function tambah(Request $request){
         $this->validate($request,[
-            'id_destinasi'=>'required', 
-            'nama_destinasi'=>'required', 
-            'lokasi_destinasi'=>'required', 
-            'harga_destinasi'=>'required', 
-            'persyaratan'=>'required', 
-            'deskripsi'=>'required', 
-            'ketinggian'=>'required']);
+            'id_riwayat_transaksi'=>'required', 
+            'user_id'=>'required', 
+            'status_transaksi'=>'required', 
+            'batas_bayar'=>'required', 
+            'id_transaksi'=>'required', 
+            'id_trip'=>'required']);
         return RiwayatT::create($request->all());
     }
 

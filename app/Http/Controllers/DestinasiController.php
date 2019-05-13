@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class DestinasiController extends Controller
 {
     public function tambah(Request $request){
-        $this->validate($request, ['id_destinasi'=>'required', 
+        $this->validate($request, [ 
         'nama_destinasi'=>'required',
         'lokasi_destinasi' =>'required', 
         'harga_destinasi'=>'required', 

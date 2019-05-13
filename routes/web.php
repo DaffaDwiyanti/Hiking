@@ -27,11 +27,11 @@ $router->get('/destinasi','DestinasiController@tampil');
 $router->get('/destinasi/{id}','DestinasiController@tampilSendiri');
 $router->delete('/destinasi/{id}','DestinasiController@hapus');
 
-$router->post('/riwayat','RiwayatController@tambah');
-$router->put('/riwayat/{id}','RiwayatController@update');
-$router->get('/riwayat','RiwayatController@tampil');
-$router->get('/riwayat/{id}','RiwayatController@tampilSendiri');
-$router->delete('/riwayat/{id}','RiwayatController@hapus');
+$router->post('/riwayat','RiwayatTController@tambah');
+$router->put('/riwayat/{id}','RiwayatTController@update');
+$router->get('/riwayat','RiwayatTController@tampil');
+$router->get('/riwayat/{id}','RiwayatTController@tampilSendiri');
+$router->delete('/riwayat/{id}','RiwayatTController@hapus');
 
 $router->post('/room','RoomController@tambah');
 $router->put('/room/{id}','RoomController@update');
