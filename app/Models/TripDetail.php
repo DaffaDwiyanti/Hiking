@@ -1,11 +1,11 @@
 <?php 
-namespace App\Model;
+namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class TripDetail extends Model
 {
     protected $table = "tb_tripDetail";
-    protected $fillable = ['id_room','user_id','id_trip']
+    protected $fillable = ['id_room','user_id','id_trip'];
 }
 
 ?>

@@ -26,11 +26,21 @@ class TransaksiController extends Controller
 
     }
 
-    public function hapus($id){
-        $Transaksi = Transaksi::find($id);
+    public function update(Request $request, $id){
+        $Transaksi = Transaksi::where('id_transaksi',$id);
         if ($Transaksi) {
             $Transaksi->update($request->all());
             return response()->json(['message'=>'Data Berhasil Terupdate']);
+        }
+        return response()->json(['message'=>'Data Gagal Terupdate']);
+    }
+
+
+    public function hapus($id){
+        $Transaksi = Transaksi::where('id_transaksi',$id);
+        if ($Transaksi) {
+            $Transaksi->delete();
+            return response()->json(['message'=>'Data Berhasil Terhapus']);
         }
         return response()->json(['message'=>'Data Gagal Terupdate']);
     }

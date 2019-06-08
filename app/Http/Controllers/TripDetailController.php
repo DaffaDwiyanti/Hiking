@@ -9,6 +9,7 @@ class TripDetailController extends Controller
     public function tampil(){
         return TripDetail::all();
     }
+
     public function tampilSendiri($id){
         $TripDetail = TripDetail::find($id);
         if (!$TripDetail) {
@@ -27,10 +28,10 @@ class TripDetailController extends Controller
     public function hapus($id){
         $TripDetail = TripDetail::find($id);
         if ($TripDetail) {
-            $TripDetail->update($request->all());
-            return response()->json(['message'=>'Data Berhasil Terupdate']);
+            $TripDetail->delete();
+            return response()->json(['message'=>'Data Berhasil Terhapus']);
         }
-        return response()->json(['message'=>'Data Gagal Terupdate']);
+        return response()->json(['message'=>'Data Gagal Terhapus']);
     }
 }
 

@@ -28,7 +28,7 @@ class RoomController extends Controller
     public function hapus($id){
         $Room = Room::find($id);
         if ($Room) {
-            $Room->update($request->all());
+            $Room->delete();
             return response()->json(['message'=>'Data Berhasil Terupdate']);
         }
         return response()->json(['message'=>'Data Gagal Terupdate']);

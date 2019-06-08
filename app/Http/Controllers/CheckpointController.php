@@ -16,9 +16,9 @@ class CheckpointController extends Controller
     }
 
     public function update(Request $request, $id){
-        $Checkpoint = Checkpoint::find($id);
+        $Checkpoint = Checkpoint::where('id_checkpoint', $id);
         if ($Checkpoint) {
-            return Checkpoint::update($request->all());
+            return Checkpoint::where('id_checkpoint', $id)->update($request->all());
             return response()->json(['message'=>'Data terupdate']);
         }
         return response()->json(['message'=>'Data gagal update'],404);

@@ -28,9 +28,9 @@ class DestinasiController extends Controller
     }
 
     public function update(Request $request, $id){
-        $Destinasi = Destinasi::find($id);
+        $Destinasi = Destinasi::where('id', $id);
         if ($Destinasi) {
-            return Destinasi::update($request->all());
+            $Destinasi->update($request->all());
             return response()->json(['message'=>'Data berhasil diupdate']);
 
         }
