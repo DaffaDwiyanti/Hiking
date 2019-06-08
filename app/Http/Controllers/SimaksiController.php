@@ -24,9 +24,17 @@ class SimaksiController extends Controller
     }
 
     public function hapus($id){
-        $Simaksi = Simaksi::find($id);
+        $Simaksi = Simaksi::where('id_simaksi',$id);
         if ($Simaksi) {
             $Simaksi->delete();
+            return response()->json(['message'=>'Data Berhasil Terupdate']);
+        }
+        return response()->json(['message'=>'Data Gagal Terupdate']);
+    }
+    public function update(Request $request, $id){
+        $Simaksi = Simaksi::where('id_simaksi',$id);
+        if ($Simaksi) {
+            $Simaksi->update($request->all());
             return response()->json(['message'=>'Data Berhasil Terupdate']);
         }
         return response()->json(['message'=>'Data Gagal Terupdate']);

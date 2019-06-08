@@ -36,6 +36,15 @@ class TripController extends Controller
         }
         return response()->json(['message'=>'Data Gagal Terhapus']);
     }
+
+    public function update(Request $request, $id){
+        $Trip = Trip::where('id_trip', $id);
+        if($Trip){
+            $Trip->update($request->all());
+            return response()->json(['message'=>'data terupdate']);
+        }
+        return response()->json(['message'=>'data gagal di update']);
+    }
 }
 
 ?>

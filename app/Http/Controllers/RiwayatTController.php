@@ -40,7 +40,7 @@ class RiwayatTController extends Controller
     }
 
     public function update(Request $request, $id){
-        $RiwayatT = RiwayatT::find($id);
+        $RiwayatT = RiwayatT::where('id_riwayat_transaksi',$id);
         if ($RiwayatT) {
             $RiwayatT->update($request->all());
             return response()->json(['message'=>'Data Berhasil Terupdate']);

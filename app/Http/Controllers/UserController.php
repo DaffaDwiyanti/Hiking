@@ -28,10 +28,19 @@ class UserController extends Controller
 
     }
 
+    public function update(Request $request, $id){
+        $User = User::where('user_id',$id);
+        if ($User) {
+            $User->update($request->all());
+            return response()->json(['message'=>'Data Berhasil Terupdate']);
+        }
+        return response()->json(['message'=>'Data Gagal Terupdate']);
+    }
+
     public function hapus($id){
         $User = User::find($id);
         if ($User) {
-            $User->update($request->all());
+            $User->delete();
             return response()->json(['message'=>'Data Berhasil Terupdate']);
         }
         return response()->json(['message'=>'Data Gagal Terupdate']);

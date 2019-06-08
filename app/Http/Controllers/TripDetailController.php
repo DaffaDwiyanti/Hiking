@@ -26,12 +26,21 @@ class TripDetailController extends Controller
     }
 
     public function hapus($id){
-        $TripDetail = TripDetail::find($id);
+        $TripDetail = TripDetail::where('id_room', $id);
         if ($TripDetail) {
             $TripDetail->delete();
             return response()->json(['message'=>'Data Berhasil Terhapus']);
         }
         return response()->json(['message'=>'Data Gagal Terhapus']);
+    }
+
+    public function update(Request $request,$id){
+        $TripDetail = TripDetail::where('id_room',$id);
+        if ($TripDetail) {
+            $TripDetail->update($request->all());
+            return response()->json(['message'=>'Data Berhasil Terupdate']);
+        }
+        return response()->json(['message'=>'Data Gagal Terupdate']);
     }
 }
 
